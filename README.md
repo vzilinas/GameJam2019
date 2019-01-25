@@ -2,5 +2,5 @@
 
 Dalyviai:
 * Vytautas
-* Gediminas (jis nemokės pats)
 * Emilijus
+* Gediminas
