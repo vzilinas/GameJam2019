@@ -10,7 +10,7 @@ public class DefenceSpawner : MonoBehaviour
     void Start()
     {
         Vector3 spawnPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        targetToFollow = GameObject.Find("Fort").transform;
+        //targetToFollow = GameObject.Find("Fort").transform;
     }
 
     // Update is called once per frame
