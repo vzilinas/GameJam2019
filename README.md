@@ -4,3 +4,5 @@ Dalyviai:
 * Vytautas
 * Emilijus
 * Gediminas
+* Mantas
+* Miglė
