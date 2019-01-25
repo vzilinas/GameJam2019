@@ -2,4 +2,5 @@
 
 Dalyviai:
 * Vytautas
+* Emilijus
 * Gediminas
