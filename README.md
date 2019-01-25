@@ -2,3 +2,4 @@
 
 Dalyviai:
 * Vytautas
+* Gediminas
