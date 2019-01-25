@@ -13,12 +13,9 @@ public class MonsterSpawner : MonoBehaviour
         InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
 
-// Update is called once per frame
-    void Update()
+    void Spawn()
     {
-        int spawnPointIndex = Random.Range(0, spawnPoints.Length);
- 
-        // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
+        int spawnPointIndex = Random.Range(0, spawnPoints.Length); 
         Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
     }
 }
