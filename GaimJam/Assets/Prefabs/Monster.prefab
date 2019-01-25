@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5427789317007199101}
   - component: {fileID: 5427789317007199099}
   m_Layer: 0
-  m_Name: cartoon-monster-png
+  m_Name: Monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5427789317007199040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.75, y: -2.39, z: 0}
-  m_LocalScale: {x: 0.30343482, y: 0.29743576, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
