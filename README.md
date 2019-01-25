@@ -13,9 +13,9 @@ Creators:
 
 
 # TODO:
- ~~* Create enemies and make them attack fort~~
- ~~* Fort has health that declines when hit~~
- ~~* Create enemy spawner~~
+ * ~~Create enemies and make them attack fort~~ 
+ * ~~Fort has health that declines when hit~~ 
+ * ~~Create enemy spawner~~ 
  * Make unit fight animation and add it when friendlies collide with enemy (like a cloud)
  * Progress bar of some kind, moving when you defeat waves/enemies/do stuff
  * Add health and death to units 
