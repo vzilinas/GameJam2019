@@ -50,9 +50,11 @@ namespace Assets.Scripts
             Debug.Log("Animation begin");
             animator.runtimeAnimatorController = fightController;
 
+            enemy.GetComponent<Renderer>().enabled = false;
             animator.StopPlayback();
             yield return new WaitForSeconds(1f);
             animator.StartPlayback();
+            enemy.GetComponent<Renderer>().enabled = true;
 
             animator.runtimeAnimatorController = normalController;
 
