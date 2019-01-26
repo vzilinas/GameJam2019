@@ -12,11 +12,21 @@ Windows OS
 
 Žaidimo istorija (pradinis variantas)
 
-Yra šeima. Tėvai nusprendžia palikti vaikus pas močiutę savaitei, nes nori skirti laiko sau.
-Vaikai bijo pabaisų ir nori būti su tėvais - su jais jaučiasi saugūs.
-Kiekvieną vakarą močiutė seka vis naują pasaką ir vaikams reikia išgyventi 7 vakarus, t.y. 7 žaidimo lygiai. 
-Perėjus atvažiuoja tėvai ir pasiima vaikus. Ir vaikai jau nebebijo nes išmoko kovot su monctrais.
+Yra Rūpeikų šeima. Tėvai nusprendžia palikti vaiką pas močiutę savaitei, nes išvyksta į Norvegiją.
+Vaikas bijo pabaisų ir nori likti su tėvais - su jais jaučiasi saugus, nepažeidžiamas.
+Kiekvieną dieną vaikas žaidžia, linksminasi, tačiau kiekvieną vakarą pradedant 21 valanda ir baigiant 6 dedasi keisti dalykėliai (padeda kontroliuoti wave, progress bar).
+Kiekvieną vakarą močiutė seka pasaką, kuri jam atrodo baisi ir vaikui reikia išgyventi 7 vakarus, t.y. 7 žaidimo lygiai.
+Močiutei pradėjus sekti pirmą kartą vaikas išsigąsta, nes iš močiutės skylės pradeda eiti pabaisos - velniai.
+Vaikas labai bijo, bet čalia buvęs meškiukas prabyla ir sako nebijoti - jis padės jam kovoje su vidiniais demonais.
+6 vakarus (lygius) jis kaunasi ir paskutiniame pasikeičia viskas. Močiutė nebeseka pasakos. Užverčia knygą, atsistoja ir pradeda eiti link vaiko.
+Jos veidas pasikeičia ir pasirodo, kad čia ne močiutė, o pikta ragana. Metas galutiniam šturmui. Pavykus įveikti raganą, bet meškiukas pasiaukoja pristabdydamas ją. 
+Berniukas padega raganą ir ji pradingsta.
+Ryte atvažiuoja tėvai ir paklausia kur močiutė. Vaikas pasakoja istoriją, bet tėvai nepatiki. Jie randa močiutės šaltą smirdantį kūną kitame kambaryje ištiktą insulto.
+Tėvai išsigąsta ir paklausia ar nebebijojo būti vienas, bet jis jau nebebijojo, nes išmoko kovot su montstrais.
+
 BONUS 7 vakarą močiutė tampa pabaisa (arba plot twist tai niekada nebuvo jų močiutė, o užsimaskavusi ragana), bando papjaut vaikus, bet jie ją padega ir yra apkaltinami žmogžudyste
+Tada ateina tėvai, klozete randa močiutę ir tėvai netiki vaikais kad buvo pabaisų ir raganų, bet vaikai žino kas įvyko
+
 
 Reikia modelių:
 Meškiukas
