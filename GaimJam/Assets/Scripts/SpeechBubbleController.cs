@@ -25,12 +25,12 @@ public class SpeechBubbleController : MonoBehaviour
         var currentText = "";
         foreach(char i in text)
         {
-            if(i == '\n')
-            {
-                yield return new WaitForSeconds(NewlineWait);
-                currentText = "";
-                continue;
-            }
+            //if(i == '\n')
+            //{
+            //    yield return new WaitForSeconds(NewlineWait);
+            //    currentText = "";
+            //    continue;
+            //}
 
             currentText += i;
             textComponent.text = currentText;
