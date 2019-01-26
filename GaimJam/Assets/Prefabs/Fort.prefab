@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8739515408936131738}
   - component: {fileID: 8739515408936131716}
   - component: {fileID: 8443630418020956530}
+  - component: {fileID: 7901702864166146219}
+  - component: {fileID: 268000004204028263}
   m_Layer: 0
   m_Name: Fort
   m_TagString: Player
@@ -28,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8739515408936131737}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.08, y: 0.12, z: 0}
-  m_LocalScale: {x: 0.572, y: 0.572, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -70,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ed315639c413e1248847c4528aa43617, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c0173bd92d65e654ca2fec27afa43aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +100,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.78, y: 2.93}
+    oldSize: {x: 19.2, y: 10.8}
     newSize: {x: 5.78, y: 2.93}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -119,3 +121,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf7478bc089d9841843557b37a3db87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Health: 1000
+--- !u!114 &7901702864166146219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8739515408936131737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79cc8eb7a4d32844ab042ffc683433ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentAction: 0
+  StartNextAction: 0
+--- !u!114 &268000004204028263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8739515408936131737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7045904086f0c3142a47b2901e1e32eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  block: {fileID: 7178981513767672713, guid: 28c96ff4beb85ac4d82ef3ff0c38b7e4, type: 3}
