@@ -9,38 +9,50 @@ namespace Assets.Scripts
 {
     public class FightingController : MonoBehaviour
     {
-        public Animator fightingAnimator;
+        public Animator animator;
+        public RuntimeAnimatorController fightController;
         public bool DoneFighting;
         public Vector2 initialFriendlyVelocity;
         public Vector2 initialEnemyVector;
         void Start()
         {
-            
+            animator.StopPlayback();
         }
         void Update()
         {
             
         }
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            if(gameObject.tag == "Enemy")
+            if(collision.gameObject.tag == "Enemy")
             {
-                initialEnemyVector = collision.gameObject.GetComponent<Rigidbody2D>().velocity;
-                initialFriendlyVelocity = gameObject.GetComponent<Rigidbody2D>().velocity;
+                Debug.Log("Its enemy");
 
+                initialEnemyVector = collision.gameObject.GetComponent<Rigidbody2D>().velocity.normalized;
+                initialFriendlyVelocity = gameObject.GetComponent<Rigidbody2D>().velocity.normalized;
+
+                gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+                collision.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
                 gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                gameObject.GetComponent<Rigidbody2D>().angularVelocity = 0;
                 collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                collision.gameObject.GetComponent<Rigidbody2D>().angularVelocity = 0;
+
+                Debug.Log("I stopped it");
 
                 StartCoroutine(FightingAnimationStart(collision.gameObject));
             }
         }
         public IEnumerator FightingAnimationStart(GameObject enemy)
         {
-            fightingAnimator.StartPlayback();
-            yield return new WaitForSeconds(3f);
-            fightingAnimator.StopPlayback();
+            Debug.Log("Animation begin");
+            animator.runtimeAnimatorController = fightController;
+            animator.StartPlayback();
+            yield return new WaitForSeconds(1f);
+            animator.StopPlayback();
+            Debug.Log("Animation end");
             gameObject.GetComponent<FriendlyController>().RecalculateHealthAndDirection(initialFriendlyVelocity);
-            enemy.GetComponent<EnemyController>().RecalculateHealthAndDirection(initialFriendlyVelocity);
+            enemy.GetComponent<EnemyController>().RecalculateHealthAndDirection(initialEnemyVector);
         }
     }
 }
