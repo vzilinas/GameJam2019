@@ -9,9 +9,6 @@ public class DefenceSpawner : MonoBehaviour
     public Vector2 movedir;
     void Start()
     {
-        // Vector3 targetToFollow = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        // Vector3 spawnPosition  = GameObject.Find("Fort").transform.position;
-        // movedir = (targetToFollow - spawnPosition).normalized;
         InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
 
