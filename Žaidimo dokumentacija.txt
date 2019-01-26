@@ -31,14 +31,13 @@ Viena iš galimų pasakų:
 Kartą seniai seniai gyveno senis ir bobutė. Augino jie mažą berniuką. 
 Berniukas labai mylėjo savo senį ir bobutę, beigi vienintelį savo žaisliuką meškiuką.
 Tačiau vieną šaltą tamsų vakarą išgirdę juoką ir linksmybes į senio ir bobutės pirkią atklydo velnias.
-Velnias pagrobė senio ir bobutės dūšią, tačiau berniuko neėme.
+Velnias pagrobė senio ir bobutės dūšią, tačiau berniuko neėmė, nes pasirodė per silpnas ir baikštus.
 Velnias sugalvojo pasišaipyti iš berniuko ir pasakė: jei įvykdysi 3 mano užduotis, pažadu paleisiu senį ir bobutę.
-Negalėsi naudotis niekuo, bet leidžiu pasiimti vieną vienintelį daiktą
-Berniukas neturėdamas ko prarasti sutiko ir pasiėmė tiktai savo mylimą meškiuką.
-Pirmoji velnio užduotis buvo pagauti 666 velniukus. Berniukas pagalvojo, kad vienas tikrai jų nepagaus ir labai nusiminė. Tačiau meškiukas staiga prabilo ir pasakė: nebijok, padėsiu tau. Meškinas pradėjo bėgti labai greitai ir akimirksniu sugaudė visus 666 velniukus. Velnias susierzino 
-Antroji užduotis atrodė vėl neįveikiama: 
-Paskutinioji užduotis buvo sunkiausia:
-Velnias negalėjo patikėti berniuko gudrumu ir neliko nieko kito kaip paleisti senį ir bobutę
+Negalėsi naudotis niekuo, bet leidžiu pasiimti vieną vienintelį daiktą.
+Berniukas neturėdamas ko prarasti sutiko ir pasiėmė tiktai savo mylimą meškiuką. Berniukas labai bijojo velnio, bet meškiukas staiga prabilo ir pasakė: nebijok, padėsiu tau. Velnias davė užduotis vieną po kitos.
+Pirmoji velnio užduotis buvo velniškai sukta, antroji užduotis atrodė vėl neįveikiama, o paskutinioji užduotis buvo iš visų sunkiausia.
+Tačiau berniuko ir meškiuko tandemas įveikė visas pasitaikiusias kliūtis.
+Velnias negalėjo patikėti ir neliko nieko kito kaip paleisti senį ir bobutę.
 Nuo to laiko velnias daugiau nebegrobė žmonių ir nesikišo į jų gyvenimą, o berniukas, senis ir bobutė gyveno ilgai ir laimingai.
 
 Reikia modelių:
