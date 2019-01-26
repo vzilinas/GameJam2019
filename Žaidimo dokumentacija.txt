@@ -15,18 +15,31 @@ Windows 10 OS
 Yra Rūpeikų šeima. Tėvai nusprendžia palikti vaiką pas močiutę savaitei, nes išvyksta į Norvegiją.
 Vaikas bijo pabaisų ir nori likti su tėvais - su jais jaučiasi saugus, nepažeidžiamas.
 Kiekvieną dieną vaikas žaidžia, linksminasi, tačiau kiekvieną vakarą pradedant 21 valanda ir baigiant 6 dedasi keisti dalykėliai (padeda kontroliuoti wave, progress bar).
-Kiekvieną vakarą močiutė seka pasaką, kuri jam atrodo baisi ir vaikui reikia išgyventi 7 vakarus, t.y. 7 žaidimo lygiai.
+Kiekvieną vakarą močiutė seka pasaką, kuri jam atrodo baisi ir vaikui reikia išgyventi 3 vakarus, t.y. 3 žaidimo lygiai.
 Močiutei pradėjus sekti pirmą kartą vaikas išsigąsta, nes iš močiutės skylės pradeda eiti pabaisos - velniai.
 Vaikas labai bijo, bet čalia buvęs meškiukas prabyla ir sako nebijoti - jis padės jam kovoje su vidiniais demonais.
-6 vakarus (lygius) jis kaunasi ir paskutiniame pasikeičia viskas. Močiutė nebeseka pasakos. Užverčia knygą, atsistoja ir pradeda eiti link vaiko.
+3 vakarus (lygius) jis kaunasi ir paskutiniame pasikeičia viskas. Močiutė nebeseka pasakos. Užverčia knygą, atsistoja ir pradeda eiti link vaiko.
 Jos veidas pasikeičia ir pasirodo, kad čia ne močiutė, o pikta ragana. Metas galutiniam šturmui. Pavykus įveikti raganą, bet meškiukas pasiaukoja pristabdydamas ją. 
 Berniukas padega raganą ir ji pradingsta.
 Ryte atvažiuoja tėvai ir paklausia kur močiutė. Vaikas pasakoja istoriją, bet tėvai nepatiki. Jie randa močiutės šaltą smirdantį kūną kitame kambaryje ištiktą insulto.
 Tėvai išsigąsta ir paklausia ar nebebijojo būti vienas, bet jis jau nebebijojo, nes išmoko kovot su montstrais.
 
-BONUS 7 vakarą močiutė tampa pabaisa (arba plot twist tai niekada nebuvo jų močiutė, o užsimaskavusi ragana), bando papjaut vaikus, bet jie ją padega ir yra apkaltinami žmogžudyste
+BONUS 3 vakarą močiutė tampa pabaisa (arba plot twist tai niekada nebuvo jų močiutė, o užsimaskavusi ragana), bando papjaut vaikus, bet jie ją padega ir yra apkaltinami žmogžudyste
 Tada ateina tėvai, klozete randa močiutę ir tėvai netiki vaikais kad buvo pabaisų ir raganų, bet vaikai žino kas įvyko
 
+Viena iš galimų pasakų:
+Kartą seniai seniai gyveno senis ir bobutė. Augino jie mažą berniuką. 
+Berniukas labai mylėjo savo senį ir bobutę, bet dar labiau savo žaislą meškiniuką.
+Tačiau vieną šaltą tamsų vakarą į senio ir bobutės sodybą atklydo velnias.
+Velnias pagrobė senį ir bobutę, tačiau berniuko neėme.
+Velnias sugalvojo pasišaipyti iš berniuko ir pasakė: jei įvykdysi 3 mano užduotis, pažadu paleisiu senį ir bobutę.
+Negalėsi naudotis niekuo, bet leidžiu pasiimti vieną vienintelį daiktą
+Berniukas neturėdamas ko prarasti sutiko ir pasiėmė tiktai savo mylimą meškiuką.
+Pirmoji velnio užduotis buvo pagauti 666 velniukus. Berniukas pagalvojo, kad vienas tikrai jų nepagaus ir labai nusiminė. Tačiau meškiukas staiga prabilo ir pasakė: nebijok, padėsiu tau. Meškinas pradėjo bėgti labai greitai ir akimirksniu sugaudė visus 666 velniukus. Velnias susierzino 
+Antroji užduotis atrodė vėl neįveikiama: 
+Paskutinioji užduotis buvo sunkiausia:
+Velnias negalėjo patikėti berniuko gudrumu ir neliko nieko kito kaip paleisti senį ir bobutę
+Nuo to laiko velnias daugiau nebegrobė žmonių ir nesikišo į jų gyvenimą, o berniukas, senis ir bobutė gyveno ilgai ir laimingai.
 
 Reikia modelių:
 Meškiukas (in-game)
