@@ -1,10 +1,10 @@
-Žaidimo pavadinimas - 
+Žaidimo pavadinimas - Bedtime stories
 
-Žaidimo tipas - 
+Žaidimo tipas - single player 2D
 
-Žaidimo žanras - 
+Žaidimo žanras - Tower defense
 
-Žaidimo aprašymas:
+Žaidimo aprašymas: 
 
 
 Techniniai žaidimo aspektai:
@@ -16,7 +16,15 @@ Yra šeima. Tėvai nusprendžia palikti vaikus pas močiutę savaitei, nes nori 
 Vaikai bijo pabaisų ir nori būti su tėvais - su jais jaučiasi saugūs.
 Kiekvieną vakarą močiutė seka vis naują pasaką ir vaikams reikia išgyventi 7 vakarus, t.y. 7 žaidimo lygiai. 
 Perėjus atvažiuoja tėvai ir pasiima vaikus. Ir vaikai jau nebebijo nes išmoko kovot su monctrais.
-BONUS 7 vakarą močiutė tampa pabaisa (arba plot twist tai niekada nebuvo jų močiutė), bando papjaut vaikus, bet jie ją padega ir yra apkaltinami žmogžudyste
+BONUS 7 vakarą močiutė tampa pabaisa (arba plot twist tai niekada nebuvo jų močiutė, o užsimaskavusi ragana), bando papjaut vaikus, bet jie ją padega ir yra apkaltinami žmogžudyste
+
+Reikia modelių:
+Meškiukas
+Velniai
+Ragana (+ dialog profile)
+Močiutė (+ dialog profile)
+Vaikas (+ dialog profile)
+Tėvai (+ dialog profile)
 
 ? Pasakos - lietuvių/užsienio/mūsų išgalvotos. Gal išvis nereikia pasakų, tik imituojama, kad močiutė seka
 ? Naujas lygis - nauji priešai, pagal pasakas, ar kartojasi tik sunkiau pereiti
