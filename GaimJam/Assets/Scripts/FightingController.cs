@@ -28,9 +28,11 @@ namespace Assets.Scripts
             {
                 Debug.Log("Its enemy");
 
-                initialEnemyVector = collision.gameObject.GetComponent<Rigidbody2D>().velocity;
-                initialFriendlyVelocity = gameObject.GetComponent<Rigidbody2D>().velocity;
+                initialEnemyVector = collision.gameObject.GetComponent<Rigidbody2D>().velocity.normalized;
+                initialFriendlyVelocity = gameObject.GetComponent<Rigidbody2D>().velocity.normalized;
 
+                gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+                collision.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
                 gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 gameObject.GetComponent<Rigidbody2D>().angularVelocity = 0;
                 collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
@@ -46,7 +48,7 @@ namespace Assets.Scripts
             Debug.Log("Animation begin");
             animator.runtimeAnimatorController = fightController;
             animator.StartPlayback();
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(1f);
             animator.StopPlayback();
             Debug.Log("Animation end");
             gameObject.GetComponent<FriendlyController>().RecalculateHealthAndDirection(initialFriendlyVelocity);

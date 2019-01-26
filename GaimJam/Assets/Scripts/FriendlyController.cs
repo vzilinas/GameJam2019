@@ -18,7 +18,9 @@ public class FriendlyController : MonoBehaviour
     public void RecalculateHealthAndDirection(Vector2 initialDirection)
     {
         var direction = -initialDirection;
-        gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(direction, ForceMode2D.Force);
+        direction.y = direction.y * 0.3f; 
+        gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
+        gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(direction * 100f, ForceMode2D.Force);
         return;
     }
 }

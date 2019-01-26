@@ -18,7 +18,9 @@ public class EnemyController : MonoBehaviour
     public void RecalculateHealthAndDirection(Vector2 initialDirection)
     {
         var direction = -initialDirection;
-        gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(direction, ForceMode2D.Force);
+        direction.y = direction.y * 0.4f;
+        gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
+        gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(direction * 100, ForceMode2D.Force);
 
         return;
     }
