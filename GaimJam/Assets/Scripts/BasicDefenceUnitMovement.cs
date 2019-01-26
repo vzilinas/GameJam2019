@@ -17,6 +17,6 @@ public class BasicDefenceUnitMovement: MonoBehaviour
 
     void moveInDirection()
     {
-           rigidbody.AddRelativeForce(movedir * speed, ForceMode2D.Force);
+        rigidbody.AddRelativeForce(movedir * speed, ForceMode2D.Force);
     }
 }
