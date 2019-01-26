@@ -28,26 +28,25 @@ namespace Assets.Scripts
         {
             if(collision.gameObject.tag == "Enemy")
             {
-                Debug.Log("Its enemy");
 
                 initialEnemyVector = collision.gameObject.GetComponent<Rigidbody2D>().velocity.normalized;
                 initialFriendlyVelocity = gameObject.GetComponent<Rigidbody2D>().velocity.normalized;
 
                 gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
                 collision.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+
                 gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 gameObject.GetComponent<Rigidbody2D>().angularVelocity = 0;
+
                 collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 collision.gameObject.GetComponent<Rigidbody2D>().angularVelocity = 0;
 
-                Debug.Log("I stopped it");
 
                 StartCoroutine(FightingAnimationStart(collision.gameObject));
             }
         }
         public IEnumerator FightingAnimationStart(GameObject enemy)
         {
-            Debug.Log("Animation begin");
             animator.runtimeAnimatorController = fightController;
 
             enemy.GetComponent<Renderer>().enabled = false;
@@ -56,11 +55,15 @@ namespace Assets.Scripts
             animator.StartPlayback();
             enemy.GetComponent<Renderer>().enabled = true;
 
-            animator.runtimeAnimatorController = normalController;
+            var friendController = gameObject.GetComponent<FriendlyController>();
+            var enemyController = enemy.GetComponent<EnemyController>();
 
-            Debug.Log("Animation end");
-            gameObject.GetComponent<FriendlyController>().RecalculateHealthAndDirection(initialFriendlyVelocity);
-            enemy.GetComponent<EnemyController>().RecalculateHealthAndDirection(initialEnemyVector);
+            friendController.RecalculateHealthAndDirection(initialFriendlyVelocity, 
+                        (int)(enemyController.Damage/2));
+            enemyController.RecalculateHealthAndDirection(initialEnemyVector, 
+                        (int)(friendController.Damage/2));
+
+            animator.runtimeAnimatorController = normalController;
         }
     }
 }
