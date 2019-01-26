@@ -1,5 +1,4 @@
-﻿using Assets.Scripts.Models;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +12,7 @@ public class FirstLevelScript : MonoBehaviour
     void Start()
     {
         Script = new IEnumerator[] {
-            LogText(2f, "Log this text"),
+            LogText(2f, "Log this text"),       // gal reikia padaryti, kad priimtų veikėjo klasę kas kalba ir atvaizuotų profilį beigi vardą
             LogText(3f, "Log this other text")
         };
         StartNextAction = true;
