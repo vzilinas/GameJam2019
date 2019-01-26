@@ -22,7 +22,7 @@ Creators:
  * Smart destroyable blocks
  * Dialog boxes
  * Make background 
- * Make storyline
+ * ~Make storyline~
  * Make menu
  * Create Failure and Victory screens
  * Fort upgradeabilty?
