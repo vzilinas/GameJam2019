@@ -29,12 +29,15 @@ Tada ateina tėvai, klozete randa močiutę ir tėvai netiki vaikais kad buvo pa
 
 
 Reikia modelių:
-Meškiukas
-Velniai
+Meškiukas (in-game)
+Velniai (in-game)
+Močiutė (in-game)
+Ragana (in-game)
 Ragana (+ dialog profile)
 Močiutė (+ dialog profile)
 Vaikas (+ dialog profile)
 Tėvai (+ dialog profile)
+Meškiukas generolas (+ dialog profile)
 
 ? Pasakos - lietuvių/užsienio/mūsų išgalvotos. Gal išvis nereikia pasakų, tik imituojama, kad močiutė seka
 ? Naujas lygis - nauji priešai, pagal pasakas, ar kartojasi tik sunkiau pereiti
