@@ -32,7 +32,9 @@ namespace Assets.Scripts
                 initialFriendlyVelocity = gameObject.GetComponent<Rigidbody2D>().velocity;
 
                 gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                gameObject.GetComponent<Rigidbody2D>().angularVelocity = 0;
                 collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                collision.gameObject.GetComponent<Rigidbody2D>().angularVelocity = 0;
 
                 Debug.Log("I stopped it");
 
@@ -48,7 +50,7 @@ namespace Assets.Scripts
             animator.StopPlayback();
             Debug.Log("Animation end");
             gameObject.GetComponent<FriendlyController>().RecalculateHealthAndDirection(initialFriendlyVelocity);
-            enemy.GetComponent<EnemyController>().RecalculateHealthAndDirection(initialFriendlyVelocity);
+            enemy.GetComponent<EnemyController>().RecalculateHealthAndDirection(initialEnemyVector);
         }
     }
 }
