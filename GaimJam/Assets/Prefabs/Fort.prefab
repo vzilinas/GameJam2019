@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8739515408936131738}
   - component: {fileID: 8739515408936131716}
   - component: {fileID: 8443630418020956530}
+  - component: {fileID: 7977308208675414255}
   m_Layer: 0
   m_Name: Fort
   m_TagString: Player
@@ -119,3 +120,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf7478bc089d9841843557b37a3db87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Health: 1000
+--- !u!114 &7977308208675414255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8739515408936131737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c68f650771b6b49aa1a240a958b416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Block: {fileID: 7178981513767672713, guid: 28c96ff4beb85ac4d82ef3ff0c38b7e4, type: 3}

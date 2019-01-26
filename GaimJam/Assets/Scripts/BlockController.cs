@@ -4,24 +4,34 @@ using UnityEngine;
 
 public class BlockController : MonoBehaviour
 {
-    public GameObject block;
-    Ray myRay;      // initializing the ray
-    RaycastHit hit; // initializing the raycasthit
+    // States change when hp is reduced
+    public List<Sprite> States = new List<Sprite>();
+    public float Health;
 
-    // Start is called before the first frame update
+    private float currentHealth;
+
     void Start()
     {
-
+        currentHealth = Health;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (Input.GetMouseButtonDown(0))
+        if (collision.gameObject.tag == "Enemy")
         {
-            Vector3 spawnPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            spawnPosition.z = 0.0f;
-            GameObject objectInstance = Instantiate(block, spawnPosition, Quaternion.Euler(new Vector3(0, 0, 0)));
+            var damage = collision.gameObject.GetComponent<EnemyModel>().Damage;
+            currentHealth -= damage;
+
+            if(currentHealth <= 0)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                // Sets new sprite according to current hp
+                GetComponent<SpriteRenderer>().sprite = States[(int)((1 - currentHealth / Health) * States.Count)];
+            }
         }
     }
 }
+
