@@ -16,12 +16,12 @@ Creators:
  * ~~Create enemies and make them attack fort~~ 
  * ~~Fort has health that declines when hit~~ 
  * ~~Create enemy spawner~~ 
- * Make unit fight animation and add it when friendlies collide with enemy (like a cloud)
+ * ~Make unit fight animation and add it when friendlies collide with enemy (like a cloud)~
  * Progress bar of some kind, moving when you defeat waves/enemies/do stuff
  * Add health and death to units 
  * ~Smart destroyable blocks~
  * Dialog boxes
- * Make background 
+ * ~Make background~
  * ~Make storyline~
  * Make menu
  * Create Failure and Victory screens
