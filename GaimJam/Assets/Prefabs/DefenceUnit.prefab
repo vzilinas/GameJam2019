@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19c51627fa3d16349ab2dd352e3c65a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fightController: {fileID: 9100000, guid: dd54794b57f980143a4f75349aaa080b, type: 2}
+  fightController: {fileID: 9100000, guid: 9a93a80c51156dc47bee827c92aee02d, type: 2}
   normalController: {fileID: 9100000, guid: eefeea34ef6503f4ab9be808843a621b, type: 2}
   DoneFighting: 0
   initialFriendlyVelocity: {x: 0, y: 0}
