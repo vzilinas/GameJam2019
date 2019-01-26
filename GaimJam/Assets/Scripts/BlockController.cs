@@ -19,7 +19,7 @@ public class BlockController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            var damage = collision.gameObject.GetComponent<EnemyModel>().Damage;
+            var damage = collision.gameObject.GetComponent<EnemyController>().Damage;
             currentHealth -= damage;
 
             if(currentHealth <= 0)
