@@ -15,7 +15,7 @@ public class DefenceSpawner : MonoBehaviour
     void Spawn()
     {
         Vector2 spawnlocation = gameObject.GetComponent<Transform>().position;
-        unit = Instantiate(unit, spawnlocation, Quaternion.Euler(new Vector3(0, 0, 0)));
-        unit.GetComponent<BasicDefenceUnitMovement>().movedir = movedir;
+        var spawnedUnit = Instantiate(unit, spawnlocation, Quaternion.Euler(new Vector3(0, 0, 0)));
+        spawnedUnit.GetComponent<BasicDefenceUnitMovement>().movedir = movedir;
     }
 }
