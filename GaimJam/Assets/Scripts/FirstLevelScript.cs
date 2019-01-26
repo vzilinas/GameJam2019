@@ -13,7 +13,7 @@ public class FirstLevelScript : MonoBehaviour
     {
         Script = new IEnumerator[] {
             LogText(2f, "Log this text"),       // gal reikia padaryti, kad priimtų veikėjo klasę kas kalba ir atvaizuotų profilį beigi vardą
-            LogText(3f, "Log this other text")
+            LogText(3f, "Log this other text")  // ir išviso, gal ne laikas, o paspaudus mygtuką turėtų pereiti į kitą dialogą
         };
         StartNextAction = true;
         //MonoBehaviourExtensions.Invoke(this, GetMetod, 0);
