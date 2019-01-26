@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class FirstLevelScript : MonoBehaviour
 {
+    public GameObject SpeechBubble;
     public int CurrentAction = 0;
     public bool StartNextAction = false;
     public IEnumerator[] Script;
@@ -12,6 +13,7 @@ public class FirstLevelScript : MonoBehaviour
     void Start()
     {
         Script = new IEnumerator[] {
+            ShowSpeechBubble("Once upon a time\nIn a land far far away..."),
             LogText(2f, "Log this text"),       // gal reikia padaryti, kad priimtų veikėjo klasę kas kalba ir atvaizuotų profilį beigi vardą
             LogText(3f, "Log this other text")  // ir išviso, gal ne laikas, o paspaudus mygtuką turėtų pereiti į kitą dialogą
         };
@@ -37,5 +39,12 @@ public class FirstLevelScript : MonoBehaviour
             StartCoroutine(Script[CurrentAction]);
             CurrentAction += 1;
         }
+    }
+
+    public IEnumerator ShowSpeechBubble(string text)
+    {
+        yield return new WaitForSeconds(0);
+        GameObject speechBubble = Instantiate(SpeechBubble, new Vector3(-9, 4.5f, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
+        speechBubble.GetComponent<SpeechBubbleController>().StartAnimation(text);
     }
 }
