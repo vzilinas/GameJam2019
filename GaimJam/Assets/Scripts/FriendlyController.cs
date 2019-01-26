@@ -19,6 +19,8 @@ public class FriendlyController : MonoBehaviour
     }
     public void RecalculateHealthAndDirection(Vector2 initialDirection, int damageTaken)
     {
+        gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
+
         Health -= damageTaken;
         if(Health <= 0)
         {
@@ -26,7 +28,6 @@ public class FriendlyController : MonoBehaviour
         }
         var direction = -initialDirection;
         direction.y = direction.y * 0.3f; 
-        gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
         gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(direction * 100f, ForceMode2D.Force);
     }
 }

@@ -34,6 +34,7 @@ public class EnemyController : MonoBehaviour
     }
     public void RecalculateHealthAndDirection(Vector2 initialDirection, int damageTaken)
     {
+        gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
         Health -= damageTaken;
         if(Health <= 0)
         {
@@ -41,7 +42,7 @@ public class EnemyController : MonoBehaviour
         }
         var direction = -initialDirection;
         direction.y = direction.y * 0.4f;
-        gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
         gameObject.GetComponent<Rigidbody2D>().AddRelativeForce(direction * 100, ForceMode2D.Force);
+
     }
 }

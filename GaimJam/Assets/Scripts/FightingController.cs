@@ -12,23 +12,27 @@ namespace Assets.Scripts
         private Animator animator;
         public RuntimeAnimatorController fightController;
         public RuntimeAnimatorController normalController;
-        public bool DoneFighting;
+        public bool DoneFighting = true;
         public Vector2 initialFriendlyVelocity;
         public Vector2 initialEnemyVector;
         void Start()
         {
             animator = gameObject.GetComponent<Animator>();
-            animator.StartPlayback();
+            //animator.StartPlayback();
         }
         void Update()
         {
-            
+            if (DoneFighting)
+            {
+                animator.runtimeAnimatorController = normalController;
+            }
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if(collision.gameObject.tag == "Enemy")
+            if(collision.gameObject.tag == "Enemy" && 
+                !collision.gameObject.GetComponent<Rigidbody2D>().isKinematic && 
+                !gameObject.GetComponent<Rigidbody2D>().isKinematic)
             {
-
                 initialEnemyVector = collision.gameObject.GetComponent<Rigidbody2D>().velocity.normalized;
                 initialFriendlyVelocity = gameObject.GetComponent<Rigidbody2D>().velocity.normalized;
 
@@ -48,13 +52,13 @@ namespace Assets.Scripts
         public IEnumerator FightingAnimationStart(GameObject enemy)
         {
             animator.runtimeAnimatorController = fightController;
-
+            DoneFighting = false;
             enemy.GetComponent<Renderer>().enabled = false;
             animator.StopPlayback();
             yield return new WaitForSeconds(1f);
             animator.StartPlayback();
             enemy.GetComponent<Renderer>().enabled = true;
-
+            DoneFighting = true;
             var friendController = gameObject.GetComponent<FriendlyController>();
             var enemyController = enemy.GetComponent<EnemyController>();
 
