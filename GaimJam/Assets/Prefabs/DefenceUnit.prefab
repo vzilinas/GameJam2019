@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3778365275119006902}
   - component: {fileID: 3134836288376687650}
   - component: {fileID: 3220526213071711087}
+  - component: {fileID: 6597337548033872287}
   m_Layer: 0
   m_Name: DefenceUnit
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4520585243876202516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3, y: -0.0633366, z: -0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -69,12 +70,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9738fa94ee5afae418b54c8f234c4881, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c4732175bbbb39e45b6b0398ca4d5462, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5, y: 5.99}
+  m_Size: {x: 5, y: 8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -92,6 +93,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71175b6b80eaf0c4b93026ec2074f5f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidbody: {fileID: 0}
+  rigidbody: {fileID: 6597337548033872287}
   speed: 0.2
   movedir: {x: 0, y: 0}
+--- !u!50 &6597337548033872287
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520585243876202516}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
