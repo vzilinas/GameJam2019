@@ -1,0 +1,1 @@
+﻿public enum ControlState { Default, TeddyCreation, BlockCreation, HatchCreation };
