@@ -13,7 +13,39 @@ public class FirstLevelScript : MonoBehaviour
     void Start()
     {
         Script = new IEnumerator[] {
-            ShowSpeechBubble("Once upon a time\nIn a land far far away..."),
+            ShowSpeechBubble(
+                " Kartą seniai seniai gyveno senis ir bobutė. \n" + 
+                " Augino jie mažą berniuką. \n" +
+                " Berniukas labai mylėjo savo senį ir bobutę, \n" +
+                " beigi vienintelį savo žaisliuką meškiuką. \n" +
+                " Tačiau vieną šaltą tamsų vakarą, \n" + 
+                " išgirdęs juoką ir linksmybes, \n" +
+                " į senio ir bobutės pirkią atklydo velnias. \n" +
+                " Velnias pagrobė senio ir bobutės dūšią, \n" +
+                " tačiau berniuko neėmė, \n" +
+                " nes pasirodė per silpnas ir baikštus. \n" +
+                " Velnias sugalvojo pasišaipyti iš berniuko ir pasakė: \n" +
+                " jei įvykdysi 3 mano užduotis, \n" +
+                " pažadu paleisiu senį ir bobutę. \n" +
+                " Negalėsi naudotis niekuo, \n" +
+                " bet leidžiu pasiimti vieną vienintelį daiktą. \n" +
+                " Berniukas neturėdamas ko prarasti sutiko \n" +
+                " ir pasiėmė tiktai savo mylimą meškiuką. \n" +
+                " Berniukas labai bijojo velnio, \n" +
+                " bet meškiukas staiga prabilo ir pasakė: \n" +
+                " nebijok, padėsiu tau. \n" +
+                " Velnias davė užduotis vieną po kitos. \n" +
+                " Pirmoji velnio užduotis buvo velniškai sukta, \n" +
+                " antroji užduotis atrodė vėl neįveikiama, \n" +
+                " o paskutinioji užduotis buvo iš visų sunkiausia. \n" +
+                " Tačiau berniuko ir meškiuko tandemas \n" +
+                " įveikė visas pasitaikiusias kliūtis. \n" +
+                " Velnias negalėjo patikėti ir \n" +
+                " neliko nieko kito kaip paleisti senį ir bobutę. \n" +
+                " Nuo to laiko velnias daugiau \n" +
+                " nebegrobė žmonių ir nesikišo į jų gyvenimą, \n" +
+                " o berniukas, senis ir bobutė gyveno ilgai ir laimingai. \n"
+                ),
             LogText(2f, "Log this text"),       // gal reikia padaryti, kad priimtų veikėjo klasę kas kalba ir atvaizuotų profilį beigi vardą
             LogText(3f, "Log this other text")  // ir išviso, gal ne laikas, o paspaudus mygtuką turėtų pereiti į kitą dialogą
         };

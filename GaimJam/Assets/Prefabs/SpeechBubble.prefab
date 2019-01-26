@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6841dcf29535366458125a0d0bb9321b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TypingPeriod: 0.2
+  TypingPeriod: 0.05
   NewlineWait: 1
   EndWait: 2
 --- !u!1 &6643981140572952039
