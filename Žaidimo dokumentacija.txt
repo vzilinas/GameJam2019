@@ -8,7 +8,7 @@
 Tower defence game that builds story where mom creates a evil mythical monsters and children create diffrent kinds of good characters and cast magic and build temporary towers to defend their carboard fort.
 
 Techniniai žaidimo aspektai:
-Windows OS
+Windows 10 OS
 
 Žaidimo istorija (pradinis variantas)
 
@@ -33,7 +33,7 @@ Meškiukas (in-game)
 Velniai (in-game)
 Močiutė (in-game)
 Ragana (in-game)
-Barikados (in-game)
+Barikados (in-game) Lego/paprastos kaladėlės/pagalvės
 
 Reikia profilių:
 Ragana (dialog profile)

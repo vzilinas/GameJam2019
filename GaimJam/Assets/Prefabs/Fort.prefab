@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 8739515408936131738}
   - component: {fileID: 8739515408936131716}
   - component: {fileID: 8443630418020956530}
-  - component: {fileID: 7901702864166146219}
-  - component: {fileID: 268000004204028263}
+  - component: {fileID: 7977308208675414255}
   m_Layer: 0
   m_Name: Fort
   m_TagString: Player
@@ -122,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 1000
---- !u!114 &7901702864166146219
+--- !u!114 &7977308208675414255
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,21 +130,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8739515408936131737}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79cc8eb7a4d32844ab042ffc683433ff, type: 3}
+  m_Script: {fileID: 11500000, guid: c7c68f650771b6b49aa1a240a958b416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentAction: 0
-  StartNextAction: 0
---- !u!114 &268000004204028263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8739515408936131737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7045904086f0c3142a47b2901e1e32eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  block: {fileID: 7178981513767672713, guid: 28c96ff4beb85ac4d82ef3ff0c38b7e4, type: 3}
+  Block: {fileID: 7178981513767672713, guid: 28c96ff4beb85ac4d82ef3ff0c38b7e4, type: 3}

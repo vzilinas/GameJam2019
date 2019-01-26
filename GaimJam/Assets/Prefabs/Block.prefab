@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7178981513767672714}
   - component: {fileID: 7178981513767672715}
   - component: {fileID: 7178981513767672712}
+  - component: {fileID: 3797771953083225149}
   m_Layer: 0
   m_Name: Block
   m_TagString: Untagged
@@ -96,3 +97,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0.010690322, y: 0.12828314}
   m_Size: {x: 1.0378772, y: 1.9834335}
   m_Direction: 0
+--- !u!114 &3797771953083225149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7178981513767672713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7045904086f0c3142a47b2901e1e32eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  States:
+  - {fileID: 21300000, guid: 14325e86f63364c4bbf91687817cfa5e, type: 3}
+  - {fileID: 21300000, guid: e0aaf99f11cee70409970df95e0bb12f, type: 3}
+  - {fileID: 21300000, guid: d344a7adbf4189144b27f47c172f6c93, type: 3}
+  - {fileID: 21300000, guid: 34e057f5b6c06df48a1b7163ee1af6ba, type: 3}
+  Health: 100

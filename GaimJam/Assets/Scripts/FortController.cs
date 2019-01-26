@@ -21,7 +21,7 @@ public class FortController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            var damage = collision.gameObject.GetComponent<Enemy>().Damage;
+            var damage = collision.gameObject.GetComponent<EnemyModel>().Damage;
             Health -= damage;
         }
     }
