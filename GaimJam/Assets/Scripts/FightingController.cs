@@ -22,15 +22,12 @@ namespace Assets.Scripts
         }
         void Update()
         {
-            if (DoneFighting)
-            {
-                animator.runtimeAnimatorController = normalController;
-            }
+
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if(collision.gameObject.tag == "Enemy" && 
-                !collision.gameObject.GetComponent<Rigidbody2D>().isKinematic && 
+            if (collision.gameObject.tag == "Enemy" &&
+                !collision.gameObject.GetComponent<Rigidbody2D>().isKinematic &&
                 !gameObject.GetComponent<Rigidbody2D>().isKinematic)
             {
                 initialEnemyVector = collision.gameObject.GetComponent<Rigidbody2D>().velocity.normalized;
@@ -52,22 +49,24 @@ namespace Assets.Scripts
         public IEnumerator FightingAnimationStart(GameObject enemy)
         {
             animator.runtimeAnimatorController = fightController;
-            DoneFighting = false;
-            enemy.GetComponent<Renderer>().enabled = false;
+
+            enemy.SetActive(false);
             animator.StopPlayback();
             yield return new WaitForSeconds(1f);
             animator.StartPlayback();
-            enemy.GetComponent<Renderer>().enabled = true;
-            DoneFighting = true;
+            enemy.SetActive(true);
+
             var friendController = gameObject.GetComponent<FriendlyController>();
             var enemyController = enemy.GetComponent<EnemyController>();
 
-            friendController.RecalculateHealthAndDirection(initialFriendlyVelocity, 
-                        (int)(enemyController.Damage/2));
-            enemyController.RecalculateHealthAndDirection(initialEnemyVector, 
-                        (int)(friendController.Damage/2));
-
             animator.runtimeAnimatorController = normalController;
+
+            enemyController.RecalculateHealthAndDirection(initialEnemyVector,
+                        (int)((float)friendController.Damage / (float)2));
+
+            friendController.RecalculateHealthAndDirection(initialFriendlyVelocity,
+                        (int)((float)enemyController.Damage / (float)2));
+
         }
     }
 }
