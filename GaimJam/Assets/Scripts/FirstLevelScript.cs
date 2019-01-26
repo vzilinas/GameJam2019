@@ -44,7 +44,7 @@ public class FirstLevelScript : MonoBehaviour
     public IEnumerator ShowSpeechBubble(string text)
     {
         yield return new WaitForSeconds(0);
-        GameObject speechBubble = Instantiate(SpeechBubble, new Vector3(-9, 4.5f, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
+        GameObject speechBubble = Instantiate(SpeechBubble, new Vector3(-7, 4.5f, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
         speechBubble.GetComponent<SpeechBubbleController>().StartAnimation(text);
     }
 }
