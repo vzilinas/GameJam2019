@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 82ba8d36af45f3c42b4637d33661af0c
+guid: e4bd7e38ca820544fbca262350d3f687
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Beyond Wonderland
+  fontName: Bigelow Rules
   fontNames:
-  - Beyond Wonderland
+  - Bigelow Rules
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

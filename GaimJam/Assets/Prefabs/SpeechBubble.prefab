@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6841dcf29535366458125a0d0bb9321b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TypingPeriod: 0.2
+  TypingPeriod: 0.05
   NewlineWait: 1
   EndWait: 2
 --- !u!1 &6643981140572952039
@@ -218,9 +218,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 82ba8d36af45f3c42b4637d33661af0c, type: 3}
+    m_Font: {fileID: 12800000, guid: e4bd7e38ca820544fbca262350d3f687, type: 3}
     m_FontSize: 300
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 300
