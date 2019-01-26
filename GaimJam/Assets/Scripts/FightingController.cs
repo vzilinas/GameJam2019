@@ -9,14 +9,16 @@ namespace Assets.Scripts
 {
     public class FightingController : MonoBehaviour
     {
-        public Animator animator;
+        private Animator animator;
         public RuntimeAnimatorController fightController;
+        public RuntimeAnimatorController normalController;
         public bool DoneFighting;
         public Vector2 initialFriendlyVelocity;
         public Vector2 initialEnemyVector;
         void Start()
         {
-            animator.StopPlayback();
+            animator = gameObject.GetComponent<Animator>();
+            animator.StartPlayback();
         }
         void Update()
         {
@@ -47,9 +49,13 @@ namespace Assets.Scripts
         {
             Debug.Log("Animation begin");
             animator.runtimeAnimatorController = fightController;
-            animator.StartPlayback();
-            yield return new WaitForSeconds(1f);
+
             animator.StopPlayback();
+            yield return new WaitForSeconds(1f);
+            animator.StartPlayback();
+
+            animator.runtimeAnimatorController = normalController;
+
             Debug.Log("Animation end");
             gameObject.GetComponent<FriendlyController>().RecalculateHealthAndDirection(initialFriendlyVelocity);
             enemy.GetComponent<EnemyController>().RecalculateHealthAndDirection(initialEnemyVector);
