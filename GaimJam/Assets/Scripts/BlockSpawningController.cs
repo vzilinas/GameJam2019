@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using Assets.Scripts.Models;
-
-
 public class BlockSpawningController : MonoBehaviour
 {
     public GameObject Block;
