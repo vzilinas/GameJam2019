@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FirstLevelScript : MonoBehaviour
 {
@@ -46,7 +47,8 @@ public class FirstLevelScript : MonoBehaviour
             ShowSpeechBubble("neliko nieko kito kaip paleisti senį ir bobutę."),
             ShowSpeechBubble("Nuo to laiko velnias daugiau"),
             ShowSpeechBubble("nebegrobė žmonių ir nesikišo į jų gyvenimą,"),
-            ShowSpeechBubble("o berniukas, senis ir bobutė gyveno ilgai ir laimingai.")
+            ShowSpeechBubble("o berniukas, senis ir bobutė gyveno ilgai ir laimingai."),
+            FinishGame()
         };
         StartNextAction = true;
     }
@@ -84,5 +86,11 @@ public class FirstLevelScript : MonoBehaviour
                      + speechBubble.GetComponent<SpeechBubbleController>().TypingPeriod * text.Length;
         yield return new WaitForSeconds(duration);
         StartNextAction = true;
+    }
+
+    public IEnumerator FinishGame()
+    {
+        SceneManager.LoadScene(3);
+        yield return new WaitForSeconds(0);
     }
 }
