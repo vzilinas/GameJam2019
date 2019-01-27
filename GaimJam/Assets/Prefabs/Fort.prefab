@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf7478bc089d9841843557b37a3db87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 1000
+  Health: 250
 --- !u!114 &7977308208675414255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,5 +149,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpeechBubble: {fileID: 33516549238517103, guid: 35ece8c99a61523488724c0d6a91f77a,
     type: 3}
+  monsterSpawner: {fileID: 0}
   CurrentAction: 0
   StartNextAction: 0
