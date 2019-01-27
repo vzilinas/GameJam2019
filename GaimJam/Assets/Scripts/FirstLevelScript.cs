@@ -73,7 +73,7 @@ public class FirstLevelScript : MonoBehaviour
     }
     public void UpdateProgress()
     {
-        progressSlider.GetComponent<Slider>().value = (float)CurrentAction / (float)Script.Length;
+        progressSlider.GetComponent<Slider>().value = ((float)CurrentAction + 1) / (float)Script.Length;
     }
     public IEnumerator ShowSpeechBubble(string text)
     {
