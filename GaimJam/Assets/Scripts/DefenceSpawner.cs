@@ -9,6 +9,7 @@ public class DefenceSpawner : MonoBehaviour
     public Vector2 movedir;
     void Start()
     {
+        Spawn();
         InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
 
