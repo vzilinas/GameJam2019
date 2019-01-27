@@ -96,7 +96,7 @@ MonoBehaviour:
   States:
   - {fileID: 21300000, guid: 808e0063d9b533644b3be86196d62bf5, type: 3}
   - {fileID: 21300000, guid: e40a273da11ce7942a3e323ab790eaa8, type: 3}
-  Health: 40
+  Health: 20
 --- !u!61 &5942664195552115344
 BoxCollider2D:
   m_ObjectHideFlags: 0
