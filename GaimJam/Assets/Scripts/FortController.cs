@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FortController : MonoBehaviour
 {
@@ -23,6 +24,12 @@ public class FortController : MonoBehaviour
             var damage = collision.gameObject.GetComponent<EnemyController>().Damage;
             Health -= damage;
             slider.GetComponent<Slider>().value = Health;
+        }
+
+        if (Health <= 0)
+        {
+            // LoseScene
+            SceneManager.LoadScene(2);
         }
     }
 }
