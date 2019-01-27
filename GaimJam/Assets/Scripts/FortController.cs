@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class FortController : MonoBehaviour
 {
-    public int Health = 1000;
+    public int Health = 250;
     private GameObject slider;
     // Start is called before the first frame update
     void Start()
