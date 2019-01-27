@@ -8,11 +8,12 @@ using UnityEngine.SceneManagement;
 public class FirstLevelScript : MonoBehaviour
 {
     public GameObject SpeechBubble;
-    public GameObject monsterSpawner;
-    public int CurrentAction = 0;
+    public GameObject[] monsterSpawner;
+    private int CurrentAction = 0;
     public bool StartNextAction = false;
     public IEnumerator[] Script;
     private GameObject progressSlider;
+    private static System.Random rnd = new System.Random();
     private Queue<GameObject> spawners = new Queue<GameObject>();
     private Vector2[] easyCoordinates = new Vector2[] { new Vector2(8f, 4f), new Vector2(-6f, 4f), new Vector2(-6f, -3f), new Vector2(-8f, -3f), };
     private Vector2[] mediumCoordinates = new Vector2[] {
@@ -123,7 +124,7 @@ public class FirstLevelScript : MonoBehaviour
             var oldSpawner = spawners.Dequeue();
             Destroy(oldSpawner);
         }
-        var newSpawner = Instantiate(monsterSpawner, position, Quaternion.Euler(Vector3.zero));
+        var newSpawner = Instantiate(monsterSpawner[rnd.Next(monsterSpawner.Length)], position, Quaternion.Euler(Vector3.zero));
         spawners.Enqueue(newSpawner);
         yield return new WaitForSeconds(0f);
         StartNextAction = true;

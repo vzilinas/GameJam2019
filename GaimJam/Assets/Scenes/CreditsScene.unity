@@ -1012,7 +1012,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Storytellers or the game
+  m_Text: Storytellers of the game
 --- !u!222 &1965188782
 CanvasRenderer:
   m_ObjectHideFlags: 0
