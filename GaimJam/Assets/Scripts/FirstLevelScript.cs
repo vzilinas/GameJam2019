@@ -15,44 +15,63 @@ public class FirstLevelScript : MonoBehaviour
     private GameObject progressSlider;
     private Queue<GameObject> spawners = new Queue<GameObject>();
     private Vector2[] easyCoordinates = new Vector2[] { new Vector2(8f, 4f), new Vector2(-6f, 4f), new Vector2(-6f, -3f), new Vector2(-8f, -3f), };
-    private Vector2[] mediumCoordinates = new Vector2[] { new Vector2(7f, 3), new Vector2(0f, 4f), new Vector2(-5f, 3f), new Vector2(-5f, -2f), new Vector2(-7f, -2.5f) };
+    private Vector2[] mediumCoordinates = new Vector2[] {
+        new Vector2(7f, 3),
+        new Vector2(0f, 4f),
+        new Vector2(-5f, 3f),
+        new Vector2(-5f, 0f),
+        new Vector2(-5f, -2.5f),
+        new Vector2(0f, -2.5f),
+        new Vector2(7f, -2.5f),
+        new Vector2(7f, 0f),
+    };
+    private Vector2[] hardCoordinates = new Vector2[] {
+        new Vector2(6f, 2),
+        new Vector2(0f, 3f),
+        new Vector2(-4f, 2f),
+        new Vector2(-4f, 0f),
+        new Vector2(-4f, -2f),
+        new Vector2(0f, -2.5f),
+        new Vector2(4f, -2.5f),
+        new Vector2(2.5f, 0f),
+    };
     private int spawnCounter = 0;
 
     void Start()
     {
         progressSlider = GameObject.Find("ProgressSlider");
         Script = new IEnumerator[] {
-            CreateEasyMonster(),    ShowSpeechBubble("Kartą seniai seniai gyveno senis ir bobutė."),
-            CreateEasyMonster(),    ShowSpeechBubble("Augino jie mažą berniuką."),
-            CreateEasyMonster(),    ShowSpeechBubble("Berniukas labai mylėjo savo senį ir bobutę,"),
-            CreateEasyMonster(),    ShowSpeechBubble("beigi vienintelį savo žaisliuką meškiuką."),
-            CreateEasyMonster(),    ShowSpeechBubble("Tačiau vieną šaltą tamsų vakarą,"),
-            CreateEasyMonster(),    ShowSpeechBubble("išgirdęs juoką ir linksmybes,"),
-            CreateEasyMonster(),    ShowSpeechBubble("į senio ir bobutės pirkią atklydo velnias."),
-            CreateMediumMonster(),  ShowSpeechBubble("Velnias pagrobė senio ir bobutės dūšią,"), 
-            CreateMediumMonster(),  ShowSpeechBubble("tačiau berniuko neėmė,"),
-            CreateMediumMonster(),  ShowSpeechBubble("nes pasirodė per silpnas ir baikštus."),
-            CreateMediumMonster(),  ShowSpeechBubble("Velnias sugalvojo pasišaipyti iš berniuko ir pasakė:"),
-            CreateMediumMonster(),  ShowSpeechBubble("jei įvykdysi 3 mano užduotis,"),
-            CreateMediumMonster(),  ShowSpeechBubble("pažadu paleisiu senį ir bobutę."),
-            CreateMediumMonster(),  ShowSpeechBubble("Negalėsi naudotis niekuo,"),
-            CreateMediumMonster(),  ShowSpeechBubble("bet leidžiu pasiimti vieną vienintelį daiktą."),
-            CreateMediumMonster(),  ShowSpeechBubble("Berniukas neturėdamas ko prarasti sutiko"),
-            CreateMediumMonster(),  ShowSpeechBubble("ir pasiėmė tiktai savo mylimą meškiuką."),
-            ShowSpeechBubble("Berniukas labai bijojo velnio,"),
-            ShowSpeechBubble("bet meškiukas staiga prabilo ir pasakė:"),
-            ShowSpeechBubble("nebijok, padėsiu tau."),
-            ShowSpeechBubble("Velnias davė užduotis vieną po kitos."),
-            ShowSpeechBubble("Pirmoji velnio užduotis buvo velniškai sukta,"),
-            ShowSpeechBubble("antroji užduotis atrodė vėl neįveikiama,"),
-            ShowSpeechBubble("o paskutinioji užduotis buvo iš visų sunkiausia."),
-            ShowSpeechBubble("Tačiau berniuko ir meškiuko tandemas"),
-            ShowSpeechBubble("įveikė visas pasitaikiusias kliūtis."),
-            ShowSpeechBubble("Velnias negalėjo patikėti ir"),
-            ShowSpeechBubble("neliko nieko kito kaip paleisti senį ir bobutę."),
-            ShowSpeechBubble("Nuo to laiko velnias daugiau"),
-            ShowSpeechBubble("nebegrobė žmonių ir nesikišo į jų gyvenimą,"),
-            ShowSpeechBubble("o berniukas, senis ir bobutė gyveno ilgai ir laimingai."),
+            CreateMonster(easyCoordinates,   3),  ShowSpeechBubble("Kartą seniai seniai gyveno senis ir bobutė."),
+            CreateMonster(easyCoordinates,   3),  ShowSpeechBubble("Augino jie mažą berniuką."),
+            CreateMonster(easyCoordinates,   3),  ShowSpeechBubble("Berniukas labai mylėjo savo senį ir bobutę,"),
+            CreateMonster(easyCoordinates,   3),  ShowSpeechBubble("beigi vienintelį savo žaisliuką meškiuką."),
+            CreateMonster(easyCoordinates,   3),  ShowSpeechBubble("Tačiau vieną šaltą tamsų vakarą,"),
+            CreateMonster(easyCoordinates,   3),  ShowSpeechBubble("išgirdęs juoką ir linksmybes,"),
+            CreateMonster(mediumCoordinates, 5),  ShowSpeechBubble("į senio ir bobutės pirkią atklydo velnias."),
+            CreateMonster(mediumCoordinates, 5),  ShowSpeechBubble("Velnias pagrobė senio ir bobutės dūšią,"),
+            CreateMonster(mediumCoordinates, 5),  ShowSpeechBubble("tačiau berniuko neėmė,"),
+            CreateMonster(mediumCoordinates, 5),  ShowSpeechBubble("nes pasirodė per silpnas ir baikštus."),
+            CreateMonster(easyCoordinates  , 5),  ShowSpeechBubble("Velnias sugalvojo pasišaipyti iš berniuko ir pasakė:"),
+            CreateMonster(mediumCoordinates, 5),  ShowSpeechBubble("jei įvykdysi 3 mano užduotis,"),
+            CreateMonster(mediumCoordinates, 5),  ShowSpeechBubble("pažadu paleisiu senį ir bobutę."),
+            CreateMonster(mediumCoordinates, 5),  ShowSpeechBubble("Negalėsi naudotis niekuo,"),
+            CreateMonster(easyCoordinates,   5),  ShowSpeechBubble("bet leidžiu pasiimti vieną vienintelį daiktą."),
+            CreateMonster(easyCoordinates,   5),  ShowSpeechBubble("Berniukas neturėdamas ko prarasti sutiko"),
+            CreateMonster(mediumCoordinates, 7),  ShowSpeechBubble("ir pasiėmė tiktai savo mylimą meškiuką."),
+            CreateMonster(mediumCoordinates, 7),  ShowSpeechBubble("Berniukas labai bijojo velnio,"),
+            CreateMonster(mediumCoordinates, 7),  ShowSpeechBubble("bet meškiukas staiga prabilo ir pasakė:"),
+            CreateMonster(hardCoordinates,   7),  ShowSpeechBubble("nebijok, padėsiu tau."),
+            CreateMonster(hardCoordinates,   7),  ShowSpeechBubble("Velnias davė užduotis vieną po kitos."),
+            CreateMonster(hardCoordinates,   7),  ShowSpeechBubble("Pirmoji velnio užduotis buvo velniškai sukta,"),
+            CreateMonster(hardCoordinates,   7),  ShowSpeechBubble("antroji užduotis atrodė vėl neįveikiama,"),
+            CreateMonster(hardCoordinates,   7),  ShowSpeechBubble("o paskutinioji užduotis buvo iš visų sunkiausia."),
+            CreateMonster(hardCoordinates,   7),  ShowSpeechBubble("Tačiau berniuko ir meškiuko tandemas"),
+            CreateMonster(hardCoordinates,   7),  ShowSpeechBubble("įveikė visas pasitaikiusias kliūtis."),
+            CreateMonster(hardCoordinates,   9),  ShowSpeechBubble("Velnias negalėjo patikėti ir"),
+            CreateMonster(hardCoordinates,   9),  ShowSpeechBubble("neliko nieko kito kaip paleisti senį ir bobutę."),
+            CreateMonster(hardCoordinates,   9),  ShowSpeechBubble("Nuo to laiko velnias daugiau"),
+            CreateMonster(easyCoordinates,   9),  ShowSpeechBubble("nebegrobė žmonių ir nesikišo į jų gyvenimą,"),
+            CreateMonster(easyCoordinates,   9),  ShowSpeechBubble("o berniukas, senis ir bobutė gyveno ilgai ir laimingai."),
             FinishGame()
         };
         StartNextAction = true;
@@ -88,17 +107,10 @@ public class FirstLevelScript : MonoBehaviour
         StartNextAction = true;
     }
 
-        
-    private IEnumerator CreateEasyMonster()
-    {
-        var rez = CreateMonsterSpawner(easyCoordinates[spawnCounter % easyCoordinates.Length], 3); 
-        spawnCounter++;
-        return rez;
-    }
 
-    private IEnumerator CreateMediumMonster()
+    private IEnumerator CreateMonster(Vector2[] locations, int maxSpawns)
     {
-        var rez = CreateMonsterSpawner(mediumCoordinates[spawnCounter % easyCoordinates.Length], 5);
+        var rez = CreateMonsterSpawner(locations[spawnCounter % locations.Length], maxSpawns);
         spawnCounter++;
         return rez;
     }
