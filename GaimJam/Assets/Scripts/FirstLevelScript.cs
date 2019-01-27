@@ -15,9 +15,9 @@ public class FirstLevelScript : MonoBehaviour
     private GameObject progressSlider;
     private static System.Random rnd = new System.Random();
     private Queue<GameObject> spawners = new Queue<GameObject>();
-    private Vector2[] easyCoordinates = new Vector2[] { new Vector2(8f, 4f), new Vector2(-6f, 4f), new Vector2(-6f, -3f), new Vector2(-8f, -3f), };
+    private Vector2[] easyCoordinates = new Vector2[] { new Vector2(8f, 4f), new Vector2(-6f, 3f), new Vector2(-6f, -3f), new Vector2(-8f, -3f), };
     private Vector2[] mediumCoordinates = new Vector2[] {
-        new Vector2(7f, 3),
+        new Vector2(7f, 3f),
         new Vector2(0f, 4f),
         new Vector2(-5f, 3f),
         new Vector2(-5f, 0f),
