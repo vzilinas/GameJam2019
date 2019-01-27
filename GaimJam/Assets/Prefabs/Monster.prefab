@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5427789317007199101}
   - component: {fileID: 5330227730631995538}
   - component: {fileID: 5410700037961893485}
+  - component: {fileID: 4223872747832133707}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Enemy
@@ -158,3 +159,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.54, y: 5.98}
   m_EdgeRadius: 0
+--- !u!95 &4223872747832133707
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5427789317007199040}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 90c127053b216474c8a661dec3d0a56d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
