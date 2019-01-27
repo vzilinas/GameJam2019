@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WinScene.unity
     guid: f1f6be74830d12b40b9d5a90ecb11844
+  - enabled: 1
+    path: Assets/Scenes/CreditsScene.unity
+    guid: 7492997f4c105484b9be5357385522a9
   m_configObjects: {}
