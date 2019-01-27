@@ -50,11 +50,11 @@ namespace Assets.Scripts
         {
             animator.runtimeAnimatorController = fightController;
 
-            enemy.SetActive(false);
+            enemy.GetComponent<Renderer>().enabled = false;
             animator.StopPlayback();
             yield return new WaitForSeconds(1f);
             animator.StartPlayback();
-            enemy.SetActive(true);
+            enemy.GetComponent<Renderer>().enabled = true;
 
             var friendController = gameObject.GetComponent<FriendlyController>();
             var enemyController = enemy.GetComponent<EnemyController>();

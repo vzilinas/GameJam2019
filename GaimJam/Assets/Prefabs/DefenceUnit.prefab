@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1681456021
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c4732175bbbb39e45b6b0398ca4d5462, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -133,8 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19c51627fa3d16349ab2dd352e3c65a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fightController: {fileID: 9100000, guid: 9a93a80c51156dc47bee827c92aee02d, type: 2}
-  normalController: {fileID: 9100000, guid: a396f567e48fd5049b864dbb65c788b2, type: 2}
+  fightController: {fileID: 9100000, guid: a3acba8cb0b54fd43bcfc38b51986a5f, type: 2}
+  normalController: {fileID: 9100000, guid: eefeea34ef6503f4ab9be808843a621b, type: 2}
   DoneFighting: 0
   initialFriendlyVelocity: {x: 0, y: 0}
   initialEnemyVector: {x: 0, y: 0}
