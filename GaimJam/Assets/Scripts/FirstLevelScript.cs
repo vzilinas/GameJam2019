@@ -8,32 +8,37 @@ using UnityEngine.SceneManagement;
 public class FirstLevelScript : MonoBehaviour
 {
     public GameObject SpeechBubble;
+    public GameObject monsterSpawner;
     public int CurrentAction = 0;
     public bool StartNextAction = false;
     public IEnumerator[] Script;
     private GameObject progressSlider;
+    private Queue<GameObject> spawners = new Queue<GameObject>();
+    private Vector2[] easyCoordinates = new Vector2[] { new Vector2(8f, 4f), new Vector2(-6f, 4f), new Vector2(-6f, -3f), new Vector2(-8f, -3f), };
+    private Vector2[] mediumCoordinates = new Vector2[] { new Vector2(7f, 3), new Vector2(0f, 4f), new Vector2(-5f, 3f), new Vector2(-5f, -2f), new Vector2(-7f, -2.5f) };
+    private int spawnCounter = 0;
 
     void Start()
     {
         progressSlider = GameObject.Find("ProgressSlider");
         Script = new IEnumerator[] {
-            ShowSpeechBubble("Kartą seniai seniai gyveno senis ir bobutė."),
-            ShowSpeechBubble("Augino jie mažą berniuką."),
-            ShowSpeechBubble("Berniukas labai mylėjo savo senį ir bobutę,"),
-            ShowSpeechBubble("beigi vienintelį savo žaisliuką meškiuką."),
-            ShowSpeechBubble("Tačiau vieną šaltą tamsų vakarą,"),
-            ShowSpeechBubble("išgirdęs juoką ir linksmybes,"),
-            ShowSpeechBubble("į senio ir bobutės pirkią atklydo velnias."),
-            ShowSpeechBubble("Velnias pagrobė senio ir bobutės dūšią,"),
-            ShowSpeechBubble("tačiau berniuko neėmė,"),
-            ShowSpeechBubble("nes pasirodė per silpnas ir baikštus."),
-            ShowSpeechBubble("Velnias sugalvojo pasišaipyti iš berniuko ir pasakė:"),
-            ShowSpeechBubble("jei įvykdysi 3 mano užduotis,"),
-            ShowSpeechBubble("pažadu paleisiu senį ir bobutę."),
-            ShowSpeechBubble("Negalėsi naudotis niekuo,"),
-            ShowSpeechBubble("bet leidžiu pasiimti vieną vienintelį daiktą."),
-            ShowSpeechBubble("Berniukas neturėdamas ko prarasti sutiko"),
-            ShowSpeechBubble("ir pasiėmė tiktai savo mylimą meškiuką."),
+            CreateEasyMonster(),    ShowSpeechBubble("Kartą seniai seniai gyveno senis ir bobutė."),
+            CreateEasyMonster(),    ShowSpeechBubble("Augino jie mažą berniuką."),
+            CreateEasyMonster(),    ShowSpeechBubble("Berniukas labai mylėjo savo senį ir bobutę,"),
+            CreateEasyMonster(),    ShowSpeechBubble("beigi vienintelį savo žaisliuką meškiuką."),
+            CreateEasyMonster(),    ShowSpeechBubble("Tačiau vieną šaltą tamsų vakarą,"),
+            CreateEasyMonster(),    ShowSpeechBubble("išgirdęs juoką ir linksmybes,"),
+            CreateEasyMonster(),    ShowSpeechBubble("į senio ir bobutės pirkią atklydo velnias."),
+            CreateMediumMonster(),  ShowSpeechBubble("Velnias pagrobė senio ir bobutės dūšią,"), 
+            CreateMediumMonster(),  ShowSpeechBubble("tačiau berniuko neėmė,"),
+            CreateMediumMonster(),  ShowSpeechBubble("nes pasirodė per silpnas ir baikštus."),
+            CreateMediumMonster(),  ShowSpeechBubble("Velnias sugalvojo pasišaipyti iš berniuko ir pasakė:"),
+            CreateMediumMonster(),  ShowSpeechBubble("jei įvykdysi 3 mano užduotis,"),
+            CreateMediumMonster(),  ShowSpeechBubble("pažadu paleisiu senį ir bobutę."),
+            CreateMediumMonster(),  ShowSpeechBubble("Negalėsi naudotis niekuo,"),
+            CreateMediumMonster(),  ShowSpeechBubble("bet leidžiu pasiimti vieną vienintelį daiktą."),
+            CreateMediumMonster(),  ShowSpeechBubble("Berniukas neturėdamas ko prarasti sutiko"),
+            CreateMediumMonster(),  ShowSpeechBubble("ir pasiėmė tiktai savo mylimą meškiuką."),
             ShowSpeechBubble("Berniukas labai bijojo velnio,"),
             ShowSpeechBubble("bet meškiukas staiga prabilo ir pasakė:"),
             ShowSpeechBubble("nebijok, padėsiu tau."),
@@ -52,12 +57,7 @@ public class FirstLevelScript : MonoBehaviour
         };
         StartNextAction = true;
     }
-    public IEnumerator LogText(float delay, string whatToLog)
-    {
-        yield return new WaitForSeconds(delay);
-        Debug.Log(whatToLog);
-        StartNextAction = true;
-    }
+   
     // Update is called once per frame
     void Update()
     {
@@ -85,6 +85,35 @@ public class FirstLevelScript : MonoBehaviour
         var duration = speechBubble.GetComponent<SpeechBubbleController>().EndWait + 1
                      + speechBubble.GetComponent<SpeechBubbleController>().TypingPeriod * text.Length;
         yield return new WaitForSeconds(duration);
+        StartNextAction = true;
+    }
+
+        
+    private IEnumerator CreateEasyMonster()
+    {
+        var rez = CreateMonsterSpawner(easyCoordinates[spawnCounter % easyCoordinates.Length], 3); 
+        spawnCounter++;
+        return rez;
+    }
+
+    private IEnumerator CreateMediumMonster()
+    {
+        var rez = CreateMonsterSpawner(mediumCoordinates[spawnCounter % easyCoordinates.Length], 5);
+        spawnCounter++;
+        return rez;
+    }
+
+    private IEnumerator CreateMonsterSpawner(Vector2 position, int maxSpawners = 1)
+    {
+
+        while (spawners.Count + 1 > maxSpawners)
+        {
+            var oldSpawner = spawners.Dequeue();
+            Destroy(oldSpawner);
+        }
+        var newSpawner = Instantiate(monsterSpawner, position, Quaternion.Euler(Vector3.zero));
+        spawners.Enqueue(newSpawner);
+        yield return new WaitForSeconds(0f);
         StartNextAction = true;
     }
 
