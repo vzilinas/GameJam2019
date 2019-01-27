@@ -9,7 +9,10 @@ public class MenuButtonsController : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-
+    public void GoToScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
     public void ExitGame()
     {
         Application.Quit();
