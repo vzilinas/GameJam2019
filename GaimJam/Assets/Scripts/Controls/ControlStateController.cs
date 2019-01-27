@@ -16,7 +16,7 @@ public class ControlStateController : MonoBehaviour
 
     public Dictionary<ControlState, float> cooldowns = new Dictionary<ControlState, float>() {
         { ControlState.BlockCreation, 1f},
-        { ControlState.TeddyCreation, 35f},
+        { ControlState.TeddyCreation, 30f},
     };
     public Dictionary<ControlState, float> lastCasted = new Dictionary<ControlState, float>() {
         { ControlState.BlockCreation, 0f},

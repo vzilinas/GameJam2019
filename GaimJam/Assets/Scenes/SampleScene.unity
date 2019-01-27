@@ -1512,9 +1512,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2075704261494225286, guid: 0fde146b0fecf4742968ebcc1208d639,
         type: 3}
+      propertyPath: monsterSpawner.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075704261494225286, guid: 0fde146b0fecf4742968ebcc1208d639,
+        type: 3}
       propertyPath: monsterSpawner
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075704261494225286, guid: 0fde146b0fecf4742968ebcc1208d639,
+        type: 3}
+      propertyPath: monsterSpawner.Array.data[0]
+      value: 
       objectReference: {fileID: 2338647371712607320, guid: 0462e1cd19b76d440abf51de42483d8e,
+        type: 3}
+    - target: {fileID: 2075704261494225286, guid: 0fde146b0fecf4742968ebcc1208d639,
+        type: 3}
+      propertyPath: monsterSpawner.Array.data[1]
+      value: 
+      objectReference: {fileID: 316032745920796946, guid: 0699dc7ec5685884cb2b080679ee5bff,
+        type: 3}
+    - target: {fileID: 2075704261494225286, guid: 0fde146b0fecf4742968ebcc1208d639,
+        type: 3}
+      propertyPath: monsterSpawner.Array.data[2]
+      value: 
+      objectReference: {fileID: 316032745920796946, guid: 02d11266d82cf844785729c382a149a1,
         type: 3}
     m_RemovedComponents:
     - {fileID: 7977308208675414255, guid: 0fde146b0fecf4742968ebcc1208d639, type: 3}
