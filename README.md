@@ -10,11 +10,11 @@ The mother reads a fairy tale to a little boy, but he sees all the monsters appe
 
 ## Creators
 
- * Vytautas
- * Emilijus
- * Gediminas
- * Mantas
- * Miglė
+ * [@vzilinas](https://github.com/vzilinas) 
+ * [@gedgeds](https://github.com/gedgeds) 
+ * [@MantasPtr](https://github.com/MantasPtr) 
+ * [@EmilijusS](https://github.com/EmilijusS) 
+ * [@MigleVai](https://github.com/MigleVai) 
 
 
 ## TODO
