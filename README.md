@@ -1,20 +1,24 @@
 # Bedtime Story
 
-Trailer: https://youtu.be/5gFyf1LJzmw
+## Trailer
 
-Our idea: 
+https://youtu.be/5gFyf1LJzmw
 
-Tower defence game that builds story where mom creates a evil mythical monsters and children create diffrent kinds of good characters and cast magic and build temporary towers to defend their carboard fort. 
+## Story
 
-Creators:
-* Vytautas
-* Emilijus
-* Gediminas
-* Mantas
-* Miglė
+The mother reads a fairy tale to a little boy, but he sees all the monsters appear around him. The demons and monsters try to take him away. His only defense is his toys - teddy bears and lego blocks.
+
+## Creators
+
+ * Vytautas
+ * Emilijus
+ * Gediminas
+ * Mantas
+ * Miglė
 
 
-# TODO:
+## TODO
+
  * ~~Create enemies and make them attack fort~~ 
  * ~~Fort has health that declines when hit~~ 
  * ~~Create enemy spawner~~ 
